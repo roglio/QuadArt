@@ -1,3 +1,14 @@
+/* QuadArt 2.0 - cooperative tiled led matrix display project       */
+/* this is a companion scketch for the img2h.pde converter          */
+/* the .h file created by the Processing counterpart will be loaded */
+/* and shown on an attached adafuit style 32x32 led matrix display  */
+/* credits for the original version goes to: Markus Lipp            */
+/* http://forums.adafruit.com/viewtopic.php?f=47&t=50115            */
+/* starting from the original version I added the ability show a    */
+/* sequence of preloaded frames                                     */
+/* 2015/10/05 leandro.zaccaria@gmail.com CC BY-SA 3.0 for AUGC      */
+/* https://www.facebook.com/groups/1376364222668338/                */
+
 #include <Adafruit_GFX.h>
 #include <RGBmatrixPanel.h>
 #include "image444.h"

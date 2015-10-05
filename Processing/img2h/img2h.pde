@@ -1,3 +1,14 @@
+/* QuadArt 2.0 - cooperative tiled led matrix display project       */
+/* this program converts a picture into a .h file to be included in */
+/* embedded projects like an Arduino based driver for led matrix    */
+/* credits for the original version goes to: Markus Lipp            */
+/* http://forums.adafruit.com/viewtopic.php?f=47&t=50115            */
+/* starting from the original version I added the ability to resize */
+/* the image, handle animated gif images and output a RGB 444 bit   */
+/* packed format, more suitable for small microcontrollers          */
+/* 2015/10/05 leandro.zaccaria@gmail.com CC BY-SA 3.0 for AUGC      */
+/* https://www.facebook.com/groups/1376364222668338/                */
+
 import gifAnimation.*;
 
 PImage[] animation;
@@ -13,6 +24,7 @@ void setup() {
 void imageName(File selection) {
   if (selection == null) {
     println("Window was closed or the user hit cancel.");
+    exit();
   }
   else {
     println("User selected " + selection.getAbsolutePath());
@@ -82,6 +94,8 @@ void imageName(File selection) {
     outputMatrix.flush();
     outputMatrix.close();
     println("Total frames: "+animation.length);
+    println("Done!");
+    exit();
   }
 }
 
